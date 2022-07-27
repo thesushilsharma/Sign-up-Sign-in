@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create an Account</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -14,26 +14,63 @@
         <h1>Join the Tron community</h1>
         <p>Create account</p>
 
-        <form action="home.php" method="post">
+        <form action="sign-up.php" method="post">
             <fieldset>
                 <legend>Required fields are followed by <abbr title="required">*</abbr>.</legend>
                 <div>
+                    <label for="name">Full Name</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name">
                 </div>
                 <div>
+                    <label for="age">Age</label>
                     <input type="text" name="age" id="age" placeholder="Enter your Age">
                 </div>
                 <div>
-                    <input type="text" name="gender" id="gender" placeholder="Enter your gender">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" required>
+                        <option value="">--Please choose an option--</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Rather not say</option>
+                        <option>Not Sure</option>
+                    </select>
                 </div>
                 <div>
-                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <label for="email">University Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your University email">
                 </div>
                 <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                    <small id="namevalid">
+                        Your username must same as university username
+                    </small>
+                </div>
+                <div>
+                    <label for="password">Create Password</label>
+                    <input type="password" pattern="[A-Za-z0-9]{8,16}" name="password"  id="password" placeholder="Enter your password"
+                        required>
+                    <input type="checkbox" onclick="ShowPassword()">Show Password
+                </div>
+                <div>
+                    <label for="password_confirm">Confirm Password</label>
+                    <input type="password" pattern="[A-Za-z0-9]{8,16}" name="password_confirm" id="password_confirm"
+                        placeholder="Confirm your password" required>
+                </div>
+                <div>
+                    <label for="phone">Contact no.</label>
                     <input type="phone" name="phone" id="phone" placeholder="Enter your phone">
                 </div>
                 <div>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your student ID"></textarea>
+                    <label for="studentid">Student ID</label>
+                    <input type="text" name="studentid" id="studentid" placeholder="Enter your student id" required>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                    <p>Agreed to terms and conditions</p>
                 </div>
                 <div>
                     <button class="btn">Submit</button>
@@ -41,7 +78,7 @@
             </fieldset>
         </form>
     </div>
-    
+
 
 </body>
 
