@@ -11,6 +11,8 @@
 ## Prerequisite
 - Xampp: web server environment with MySql
 - PhpMyAdmin: web-based database management tool
+### Installation :
+Modify or import `database.sql`  file from phpmyadmin.
 
 ## How it works
 - Client - User
